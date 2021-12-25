@@ -230,6 +230,23 @@ for (var i = 0; i < numsArr.length; i++) {
        }
 }
 console.log(numsArr);
+
+
+solution:
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
+var str_all=0;
+for (var i = 0; i < numsArr.length;i++) {
+ var inner_array = numsArr[i];
+ for(var j = 0 ; j < inner_array.length;j++ )
+ {     
+      if(str_all%2=== 0 )
+      {
+         inner_array[j] =  "even";
+      }
+      str_all+=1;
+ } 
+}
+console.log(numsArr);
 **************************************************************************************************************************************
 Write a code to print elements in the inner arrays in reverse
 Output: 11 10 9 8 7 6 5 4 3 2 1
@@ -241,6 +258,21 @@ for (var i = 0; i < numsArr.length; i++) {
      str_all +=inner_array[j]
 }
 console.log(str_all);
+
+solution:
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
+var str_all=[];
+for(var i=numsArr.length-1;i>=0;i--){
+ var inner_array = numsArr[i];
+ for(var j=inner_array.length-1;j>=0;j--){
+     str_all.push(inner_array[j]);
+}
+}
+console.log(str_all.join(' '));
+
+
+
+
 ***********************************************************************************************************************************
 Write a code to add elements in the inner arrays based on odd or even values
 Output:
@@ -259,6 +291,29 @@ for (var i = 0; i < numsArr.length; i++) {
  else
  {
  sum_even += numsArr[i]
+ }
+}
+}
+console.log(sum_odd);
+console.log(sum_even);
+
+
+
+
+solution:
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
+var sum_odd=0;
+var sum_even=0;
+for (var i = 0; i < numsArr.length; i++) {
+ var inner_array = numsArr[i];
+ for(var j = 0 ; j < inner_array.length;j++ ){
+ if(inner_array[j]%2==0)
+ {
+ sum_even += inner_array[j];
+ }
+ else
+ {
+ sum_odd += inner_array[j];
  }
 }
 }
