@@ -147,8 +147,21 @@ const sum = (a, b) =>
  a + b
 const sum = num.reduce(sum)
 console.log(sum);
+
+
+solution:
+const num = [10, 20, 30, 40,50,60,70,80,90,100] 
+const sum = (a, b) =>a + b
+ 
+console.log(num.reduce(sum,0));
+
+
+
 — — — — — — — — — — — — — — — — — — — — — — — — —
+
+
 Fix the code to rotate an array by k times and return rotated array using IIFE function
+
 Code:
 var arr = [1, 2, 3, 6, 8, 6, 1, 9, 10, 12, 13];
 var k = 3;
@@ -162,6 +175,22 @@ k = arr.length % k;
  count += 1;
  }
  console.log(out);})();
+ 
+ solution:
+ var arr = [1, 2, 3, 6, 8, 6, 1, 9, 10, 12, 13];
+var k = 3;
+var out;
+k = arr.length % k;
+(function() {
+ out = arr.slice(k + 1, arr.length);
+ var count = out.length;
+ for (var i = 0; i < k + 1; i++) {
+ out[count] = arr[i];
+ count += 1;
+ }
+ console.log(out);})(arr);  
+ 
+ 
 — — — — — — — — — — — — — — — — — — — — — — — — —
 Fix the code to gen Title caps.
 Code:
