@@ -192,7 +192,10 @@ k = arr.length % k;
  
  
 — — — — — — — — — — — — — — — — — — — — — — — — —
+
+
 Fix the code to gen Title caps.
+
 Code:
 var arr = [“guvi”, “geek”, “zen”, “fullstack”];
 (function() {
@@ -200,8 +203,23 @@ var arr = [“guvi”, “geek”, “zen”, “fullstack”];
  console.log(arr[0][i].toUpperCase() + arr[i].substr(1));
  }
 })();
+
+
+solution:
+
+var arr = ["guvi", "geek", "zen", "fullstack"];
+(function(arr) {
+ for (var i = 0; i < arr.length; i++) {
+ console.log(arr[i][0].toUpperCase() + arr[i].substr(1));
+ }
+})(arr);
+
+
+
 — — — — — — — — — — — — — — — — — — — — — — — — —
+
 print all odd numbers in an array using IIFE function
+
 Code:
 var arr = [1, 2, 3, 5, 7, 79, 7, 2, 6, 9, 4];
 (function() {
@@ -210,15 +228,38 @@ var arr = [1, 2, 3, 5, 7, 79, 7, 2, 6, 9, 4];
  console.log(arr[i]);
  }}
 })();
+
+solution:
+
+var arr = [1, 2, 3, 5, 7, 79, 7, 2, 6, 9, 4];
+(function(arr) {
+ for (var i = 0; i < arr.length; i++) {
+ if (arr[i] % 2 === 0) {
+ console.log(arr[i]);
+ }}
+})(arr);
+
+
 — — — — — — — — — — — — — — — — — — — — — — — — —
 Fix the code to reverse.
+
 Code:
 (function(str){
  str1 = str.split(“ “).reverse().join(“”);
  console.log(str1); 
 })(“abcd”)
+
+solution:
+
+(function(str){
+    let str1 = str.split("").reverse().join("");
+    console.log(str1); 
+   })("abcd")
+   
 — — — — — — — — — — — — — — — — — — — — — — — — —
+
 Fix the code to remove duplicates.
+
 Code:
 var res = function(arr){
  for(var i=0; i < arr.length; i++){
